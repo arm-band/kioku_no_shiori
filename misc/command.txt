@@ -1,1 +1,0 @@
-sass D:\xampp\htdocs\test\_test\kioku_no_shiori\src\scss\index.scss:D:\xampp\htdocs\test\_test\kioku_no_shiori\\dist\css\index.css --style compressed
