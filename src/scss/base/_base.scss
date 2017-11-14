@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+// ============================================= *
+//                                               *
+// 全体設定                                       *
+//                                               *
+// ============================================= */
+a, a:link {
+	color: $color;
+	text-decoration: none;
+    @include transitionSet();
+}
+a:visited, a:hover, a:active {
+	color: $color;
+	text-decoration: none;
+}
+
+//YuGothic用
+@font-face {
+    font: {
+        family: "Jugos"; //ユーゴスなんとか
+        weight: normal;
+    }
+    src: local("YuGothic-Medium"), //Postscript name
+         local("Yu Gothic Medium"), //Chrome
+         local("YuGothic-Regular"); //Mediumがない場合
+}
+@font-face {
+    font: {
+        family: "Jugos"; //ユーゴスなんとか
+        weight: bold;
+    }
+    src: local("YuGothic-Bold"), //Postscript name
+         local("Yu Gothic"); //Chrome
+}
+
+//フォント指定
+body {
+    @include jugosmin();
+}
+
+//IEでスクロールバーの背後までページが描画されてしまうのを防ぐ
+@-ms-viewport {
+    width: auto;
+    initial-scale: 1;
+}

@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+// ============================================= *
+//                                               *
+// Import                                        *
+//                                               *
+// ============================================= */
+//@import "assets/bootstrap/bootstrap"; //bootstrap(3.3.7)
+@import "base/var"; //変数
+@import "base/module"; //ベンダープレフィックス等のMixinモジュール
+@import "base/base"; //フォント指定やIE対処など
+
+// ============================================= *
+//                                               *
+// 全体                                           *
+//                                               *
+// ============================================= */
+//ボタンの影とクリック時に影消える
+.btn {
+    margin-top: -4px;
+    @include dropShadowSkew();
+    &.active {
+        @include dropShadowSkewInset();
+    }
+}
+.btn-default {
+    &, &:link, &:visited, &:hover, &:active, &:focus {
+        color: $color;
+    }
+}
+.label-default, .label-warning,
+.panel-default, .panel-warning {
+    color: $color;
+}
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger {
+    &, &:link, &:visited, &:hover, &:active, &:focus {
+        color: $bg-color;
+    }
+}
+.label-primary, .label-success, .label-info, .label-danger,
+.panel-primary, .panel-success, .panel-info, .panel-danger {
+    color: $bg-color;
+}
+
+// ============================================= *
+//                                               *
+// ヘッダ(ナビゲーションバー)                        *
+//                                               *
+// ============================================= */
+@import "common/header";
+// ============================================= *
+//                                               *
+// メインコンテンツ                                 *
+//                                               *
+// ============================================= */
+main {
+	background-color: $bg-color;
+	color: $color;
+}
+// ============================================= *
+//                                               *
+// フッタ                                         *
+//                                               *
+// ============================================= */
+@import "common/footer";
+// ============================================= *
+//                                               *
+// ページトップへ戻る                               *
+//                                               *
+// ============================================= */
+@import "common/returnpagetop";

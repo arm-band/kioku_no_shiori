@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@import "common";
+
+// ============================================== *
+//                                                *
+//  表示                                           *
+//                                                *
+// ============================================= */
+h1,h2,h3,h4,h5,h6 {
+    margin: {
+        top: 0;
+        bottom: 0;
+    }
+}
+//全体表示
+#wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.main {
+    font-size: 16px;
+    @include jugosmin();
+    margin-bottom: 2rem;
+    .form-control {
+        width: 30rem;
+        display: inline-block;
+    }
+    .list {
+        .col-xs-12 {
+            margin-bottom: 2rem;
+        }
+        &-group-item-text {
+            display: inline-block;
+        }
+        .label {
+            margin-left: 2rem;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.header {
+    margin: 1rem;
+    padding: 2rem 1rem;
+    background-color: $main-color;
+    border: 6px solid $accent-color;
+    border-radius: 4px;
+    color: $bg-color;
+    @include dropShadowSkew();
+    &_head {
+        margin-left: 4rem;
+        &:before{
+            content: " ";
+            position: absolute;
+            background-color: $bg-color;
+            top: 3.5rem;
+            left: 2.5rem;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 1.5rem;
+            @include dropShadowSkewInset();
+        }
+        &:after {
+            content: ">";
+            position: absolute;
+            vertical-align: middle;
+            top: 3rem;
+            left: -0.3rem;
+            width: 0;
+            height: 0;
+            font-size: 5rem;
+            line-height: 0.8;
+            color: #c96;
+        }
+    }
+}
