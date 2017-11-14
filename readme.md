@@ -1,6 +1,10 @@
 # 記憶のしおり
 
-簡単なWebブックマークアプリです(IndexedDBテスト)。
+## 概要
+
+簡単なWebブックマークアプリです。
+
+IndexedDBのテストとして作ったので、実用面はあまり考慮していません……。
 
 ## 仕様
 
@@ -61,6 +65,10 @@
 ## 検証環境
 
 WindowsのChromeで検証しています
+
+## デモ
+
+[リポジトリのGithubページ](https://arm-band.github.io/kioku_no_shiori/)にデモがあります。
 
 ## 免責
 
